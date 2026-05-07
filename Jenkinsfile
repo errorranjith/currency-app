@@ -1,13 +1,9 @@
-pipeline {
-    agent any
-
-    stages {
-
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/errorranjith/currency-app.git'
-            }
-        }
+stage('Checkout') {
+    steps {
+        git branch: 'main',
+        url: 'https://github.com/errorranjith/currency-app.git'
+    }
+}
 
         stage('Build') {
             steps {
